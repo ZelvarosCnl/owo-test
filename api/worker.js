@@ -23,7 +23,8 @@ export default {
     }
 
     const url = new URL(request.url);
-    const path = url.pathname;
+    let path = url.pathname;
+if (path.includes('/api/worker')) path = path.replace('/api/worker', '/api');
     const headers = {
       'Access-Control-Allow-Origin': '*',
       'Content-Type': 'application/json'
