@@ -1,5 +1,7 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/api/worker.js" }
-  ]
+  "functions": {
+    "api/worker.js": {
+      "runtime": "edge"
+    }
+  }
 }
